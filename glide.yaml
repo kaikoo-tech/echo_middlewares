@@ -1,0 +1,13 @@
+package: github.com/kaikoo-tech/echo_middlewares
+import:
+- package: github.com/labstack/echo
+  version: ^3.0.3
+- package: github.com/stretchr/testify
+  version: ^1.1.4
+  subpackages:
+  - assert
+- package: github.com/k0kubun/pp
+  version: ^2.2.0
+- package: github.com/demon-xxi/wildmatch
+- package: github.com/ryanuber/go-glob
+  version: ^0.1.0
