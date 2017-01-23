@@ -12,8 +12,9 @@ dependencies:
       sudo rm -rf /usr/local/go &&
       sudo tar -C /usr/local -xzf go.tar.gz &&
       sudo chmod a+w /usr/local/go/src/ &&
-      mkdir -p $GOPATH/bin &&
-      curl https://glide.sh/get | sh
+      sudo add-apt-repository ppa:masterminds/glide && sudo apt-get update &&
+      sudo apt-get install glide
+
 
 
 test:
