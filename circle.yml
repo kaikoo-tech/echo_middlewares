@@ -7,7 +7,7 @@ machine:
 
 dependencies:
   pre:
-    - >
+    - |
       curl -o go.tar.gz -sL https://storage.googleapis.com/golang/go$GOVERSION.linux-amd64.tar.gz &&
       sudo rm -rf /usr/local/go &&
       sudo tar -C /usr/local -xzf go.tar.gz &&
@@ -17,7 +17,5 @@ dependencies:
 
 test:
   override:
-    - glide install:
-      parallel: true
-    - go test -v:
-      parallel: true
+    - glide install
+    - go test -v
