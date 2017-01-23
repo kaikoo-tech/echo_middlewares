@@ -1,6 +1,6 @@
 # Echo Custom Middlewares
 
-[![CircleCI](https://circleci.com/gh/kaikoo-tech/echo_middlewares/tree/master.svg?style=svg)](https://circleci.com/gh/kaikoo-tech/echo_middlewares/tree/master)
+[![wercker status](https://app.wercker.com/status/ad54131952990ee7d701ead0b5694868/s/master "wercker status")](https://app.wercker.com/project/byKey/ad54131952990ee7d701ead0b5694868)
 
 ## Referer
 Like a GoogleConsoleAPI Feferer+AuthKey Aunthenticate Middleware
