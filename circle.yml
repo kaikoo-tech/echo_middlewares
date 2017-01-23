@@ -4,6 +4,8 @@ machine:
     GOROOT: "/home/ubuntu/go"
     PATH: "/home/ubuntu/go/bin:$PATH"
     GOVERSION: "1.7.4"
+
+dependencies:
   pre:
     - >
       curl -o go.tar.gz -sL https://storage.googleapis.com/golang/go$GOVERSION.linux-amd64.tar.gz &&
