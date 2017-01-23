@@ -11,7 +11,7 @@ dependencies:
   pre:
     # Install Golang
     - if [[ ! -e /home/ubuntu/go/bin/go ]]; then cd /home/ubuntu; curl https://storage.googleapis.com/golang/go$GOVERSION.linux-amd64.tar.gz | tar -xz; fi
-      go version
+    - go version
     # Install Glide
     - |
       curl -o glide.tar.gz -sL https://github.com/Masterminds/glide/releases/download/v0.12.3/glide-v0.12.3-linux-amd64.tar.gz &&
@@ -26,4 +26,4 @@ dependencies:
 
 test:
   override:
-    - go test -v
+    - go test $(go list ./...|grep -v vendor) -v
