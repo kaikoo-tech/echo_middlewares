@@ -23,7 +23,7 @@ dependencies:
       glide --version
 
   override:
-    - glide install
+    - glide install -v
 
 test:
   override:
