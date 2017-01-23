@@ -2,7 +2,7 @@ machine:
   environment:
     GO15VENDOREXPERIMENT: 1
     GOROOT: "/home/ubuntu/go"
-    PATH: "/home/ubuntu/go/bin:$GOPATH/bin:$PATH"
+    PATH: "/home/ubuntu/go/bin:/usr/local/bin:$GOPATH/bin:$PATH"
     GOVERSION: "1.7.4"
 
 dependencies:
@@ -17,7 +17,7 @@ dependencies:
     - |
       curl -o glide.tar.gz -sL https://github.com/Masterminds/glide/releases/download/v0.12.3/glide-v0.12.3-linux-amd64.tar.gz &&
       sudo tar -C /usr/local/bin -xvzf glide.tar.gz &&
-      sudo chmod a+w /usr/local/glide &&
+      sudo chmod a+w /usr/local/bin/glide &&
       glide --version
 
   override:
