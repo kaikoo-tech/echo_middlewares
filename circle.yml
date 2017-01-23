@@ -13,6 +13,7 @@ dependencies:
       sudo rm -rf /usr/local/go &&
       sudo tar -C /usr/local -xzf go.tar.gz &&
       sudo chmod a+w /usr/local/go/src/ &&
+      ls -la /usr/local/go/src/ &&
       go version
     # Install Glide
     - |
