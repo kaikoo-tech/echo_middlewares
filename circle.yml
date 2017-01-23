@@ -12,7 +12,7 @@ dependencies:
       sudo rm -rf /usr/local/go &&
       sudo tar -C /usr/local -xzf go.tar.gz &&
       sudo chmod a+w /usr/local/go/src/ &&
-      mkdir $GOROOT && mkdir $GOROOT/bin &&
+      mkdir $GOPATH/bin &&
       curl https://glide.sh/get | sh
 
 
