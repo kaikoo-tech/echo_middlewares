@@ -12,7 +12,8 @@ dependencies:
       curl -o go.tar.gz -sL https://storage.googleapis.com/golang/go$GOVERSION.linux-amd64.tar.gz &&
       sudo rm -rf /usr/local/go &&
       sudo tar -C /usr/local -xzf go.tar.gz &&
-      sudo chmod a+w /usr/local/go/src/
+      sudo chmod a+w /usr/local/go/src/ &&
+      go version
     # Install Glide
     - |
       curl -o glide.tar.gz -sL https://github.com/Masterminds/glide/releases/download/v0.12.3/glide-v0.12.3-linux-amd64.tar.gz &&
