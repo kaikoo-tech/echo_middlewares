@@ -2,7 +2,7 @@ machine:
   environment:
     GO15VENDOREXPERIMENT: 1
     GOROOT: "/home/ubuntu/go"
-    PATH: "/home/ubuntu/go/bin:$PATH"
+    PATH: "/home/ubuntu/go/bin:$GOPATH/bin:$PATH"
     GOVERSION: "1.7.4"
 
 dependencies:
