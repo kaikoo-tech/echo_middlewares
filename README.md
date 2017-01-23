@@ -1,5 +1,7 @@
 # Echo Custom Middlewares
 
+[![CircleCI](https://circleci.com/gh/kaikoo-tech/echo_middlewares/tree/master.svg?style=svg)](https://circleci.com/gh/kaikoo-tech/echo_middlewares/tree/master)
+
 ## Referer
 Like a GoogleConsoleAPI Feferer+AuthKey Aunthenticate Middleware
 
