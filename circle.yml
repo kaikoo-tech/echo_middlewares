@@ -1,19 +1,16 @@
 machine:
   environment:
-    GO15VENDOREXPERIMENT: 1
-    GOROOT: "/home/ubuntu/go"
-    PATH: "/home/ubuntu/go/bin:/usr/local/bin:$GOPATH/bin:$PATH"
+     GO15VENDOREXPERIMENT: 1
+        GOROOT: "/home/ubuntu/go"
+        PATH: "/home/ubuntu/go/bin:$PATH"
     GOVERSION: "1.7.4"
 
 dependencies:
+  cache_directories:
+    - "/home/ubuntu/go"
   pre:
     # Install Golang
-    - |
-      curl -o go.tar.gz -sL https://storage.googleapis.com/golang/go$GOVERSION.linux-amd64.tar.gz &&
-      sudo rm -rf /usr/local/go &&
-      sudo tar -C /usr/local -xzf go.tar.gz &&
-      sudo chmod a+w /usr/local/go/src/ &&
-      ls -la /usr/local/go/src/ &&
+    - if [[ ! -e /home/ubuntu/go/bin/go ]]; then cd /home/ubuntu; curl https://storage.googleapis.com/golang/go$GOVERSION.linux-amd64.tar.gz | tar -xz; fi
       go version
     # Install Glide
     - |
