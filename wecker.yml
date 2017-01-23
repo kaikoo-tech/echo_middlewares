@@ -1,0 +1,10 @@
+box: golang
+build:
+  steps:
+    - setup-go-workspace
+    - glide-install
+    # Build the project
+    - script:
+        name: test
+        code: |
+          go test
