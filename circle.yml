@@ -12,7 +12,11 @@ dependencies:
       sudo rm -rf /usr/local/go &&
       sudo tar -C /usr/local -xzf go.tar.gz &&
       sudo chmod a+w /usr/local/go/src/
-    - sudo add-apt-repository ppa:masterminds/glide -y && sudo apt-get update && sudo apt-get install glide -y
+    - |
+      curl -o glide.tar.gz -sL https://github.com/Masterminds/glide/releases/download/v0.12.3/glide-v0.12.3-linux-amd64.tar.gz &&
+      sudo rm -rf /usr/local/bin/glide &&
+      sudo tar -C /usr/local/bin -xzf glide.tar.gz &&
+      sudo chmod a+w /usr/local/glide
   override:
     - glide install
 
